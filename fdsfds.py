@@ -1,0 +1,8 @@
+f = open("дружба это чуда.txt","r")
+textList = f.read().splitlines()
+print(textList)
+f.close()
+a = open("это наш мир.txt","r")
+textList = a.read().splitlines()
+print(textList)
+a.close()
