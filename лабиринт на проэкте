@@ -1,0 +1,73 @@
+myList=["p","*","*","*","*","*","*","*","*","*","*","*","*","|"],["|","_","|","*","|","_","_","_","|","*","|","|","*","|"],["|","*","|","*","|","_","_","_","|","*","|","|","*","|"],["|","*","*","*","*","*","*","*","|","*","|","|","*","|"],["|","*","_","_","_","_","_","*","|","*","|","|","*","|"],["|","*","|","_","_","_","_","*","|","_","|","|","*","|"],["|","*","|","*","*","*","*","*","*","*","*","|","*","|"],["|","_","|","*","_","_","_","_","_","_","_","_","*","|"],["|","w","*","*","|","*","*","*","*","*","*","*","*","|"],["|","_","_","_","_","_","_","_","_","_","_","_","_","_"]
+stolbec = 0
+stroka = 0
+command = input()
+for i in myList:
+      for j in i:
+        print(j, end='')
+      print()
+while command !="выход":
+    commandForMove = input()
+    if commandForMove == "ц":
+      if myList[stolbec-1][stroka]=="|":
+            myList[stolbec][stroka]="*"
+            stroka=0
+            stolbec=0
+            myList[stolbec][stroka]="p"
+      else:
+            myList[stolbec][stroka]="*"
+            stolbec=stolbec-1
+            myList[stolbec][stroka]="p"
+      for i in myList:
+            for j in i:
+                print(j, end='')
+            print()
+    if commandForMove == "ф":
+        if myList[stolbec][stroka+1]=="|":
+            myList[stolbec][stroka]="*"
+            stroka=0
+            stolbec=0
+            myList[stolbec][stroka]="p"
+        else:
+            myList[stolbec][stroka]="*"
+            stroka=stroka-1
+            myList[stolbec][stroka]="p"
+        for i in myList:
+            for j in i:
+                print(j, end='')
+            print()
+    if commandForMove == "ы":
+        if myList[stolbec+1][stroka]=="|":
+            myList[stolbec][stroka]="*"
+            stroka=0
+            stolbec=0
+            myList[stolbec][stroka]="p"
+        else:
+            myList[stolbec][stroka]="*"
+            stolbec=stolbec+1
+            myList[stolbec][stroka]="p"
+        for i in myList:
+              for j in i:
+                  print(j, end='')
+              print()
+    if commandForMove == "в":
+        if myList[stolbec][stroka-1]=="|":
+            myList[stolbec][stroka]="*"
+            stroka=0
+            stolbec=0
+            myList[stolbec][stroka]="p"
+        else:
+            myList[stolbec][stroka]="*"
+            stroka=stroka+1
+            myList[stolbec][stroka]="p"
+        for i in myList:
+            for j in i:
+                print(j, end='')
+            print()
+  
+  
+  
+  
+  
+    command = input()
+  
