@@ -1,57 +1,73 @@
 game = input("Хотите ли вы 'начать' игру или вы хотите 'выход'.")
 a = 100
 h1 = 0
-at1 = 19
+at1 = 6
 op = 0
 import random
 import time
-while game !="выход" and a >= 0 and op <= 10000:
+print("но перед началом прочитайте пожалуйста правила")
+time.sleep(3)
+print("правило первое: нельзя читерить")
+time.sleep(2)
+print("правило второе слушай создателя (точнее меня)")
+time.sleep(2)
+print("ну и третье правило веселитесь")
+time.sleep(2)
+u10 = input("вы прочитали правило?")
+while game !="выход" and a >= 0 and op <= 3000 u10 != "нет":
     ppp = 0
     if game == "начать":
         print("Вы попали в этот мир, мир фантазий!")
-        time.sleep(3)
+        time.sleep(2)
         l = input("Но стоп как вас зовут герой?")
         print(f"Вас зовут {l}?")
-        time.sleep(3)
+        time.sleep(2)
         print("Ну ладно тогда начнем!")
+        time.sleep(2)
+        print("Вы герой в пещере кещащий монстроми ваша задача набрать 3k золота!")
         time.sleep(3)
-        print("Вы герой в пещере кещащий монстроми ваша задача набрать 10k золота!")
-        time.sleep(5)
+        
         print("так что хватит этого текста и пойдем играть!")
-        time.sleep(3)
+        time.sleep(2)
     h = random.randint (1,10)
     if h == 1:
         print("Вау на встречу вам попался сундук с сокровищем!")
         u = random.randint(100,1000)
-        time.sleep (2)
+        time.sleep (1)
         print(f"Вы нашли там {u} золота.")
         op = op+u
-        ioyuio = 10000-op
-        time.sleep (2)
+        ioyuio = 3000-op
+        time.sleep (1)
         print(f"ваш баланс: {op} и вам не хватает еще {ioyuio}.")
     if h == 9 or h == 10:
         print("вы получили оружие!")
         px = random.randint(1,4)
-        time.sleep (2)
-        print(f"ваш урон повышен на: {px}")
-        at1= at1+px
+        if at1 < 16:
+            print(f"вы повысели свой урон на: {px}")
+            at1 = at1+px
+        if at1 >= 16 or at1 == 18:
+            y8 = 19-at1
+            print(f"вы повысели свой урон на: {y8}")
+            at1 = at1+y8
+        if at1 == 19:
+            print("вы привысели максимум")
     if h == 7 or h == 8:
         print("герой вы видите на дороге какую то колбу")
-        time.sleep (2)
+        time.sleep (1)
         print("вау это же колба здоровья но стоп может это яд?")
-        time.sleep (3)
+        time.sleep (1)
         pit = input("пить или не пить?")
         if pit == "пить":
             yu = random.randint(1,10)
             if yu >= 8:
                 print("вы выпили содержимое, но блин что то не то у вас голова кружится")
-                time.sleep (3)
+                time.sleep (2)
                 print("вы получили 20 урона!")
                 a = a-20
                 print(f"ваше здоровье стало: {a}")
             if yu <= 7:
                 print("вам понравилось!")
-                time.sleep (2)
+                time.sleep (1)
                 print("ваше здоровье востановилось на 20")
                 if a == 100:
                     print("ваше здоровье не изменилось")
@@ -71,9 +87,9 @@ while game !="выход" and a >= 0 and op <= 10000:
         at = random.randint(2,10)
         hhu = random.randint(40,400)
         while h1 >= 0 and a >= 0 and ppp != 12:
-            print("пробовать сбежать (20% шанс)")
-            print("попробывать атаковать")
-            print("или увернуться с внезапной атакой (30% шанс)")
+            print("пробовать 'сбежать' (20% шанс)")
+            print("попробывать 'атаковать'")
+            print("'улонение' с внезапной атакой (30% шанс)")
             time.sleep (2)
             print(f"статистика монстра: атака {at}; здоровье {h1};золото за убийство {hhu}")
             time.sleep (3)
@@ -132,14 +148,16 @@ while game !="выход" and a >= 0 and op <= 10000:
                     print(f"у вас осталось: {a} здоровья")
             if h1 <= 0:
                 op = hhu + op
-                uio = 10000 - op
+                uio = 3000 - op
                 print(f"вы получили: {hhu}, ваш баланс: {op}, вам не хватает еще: {uio}")
         if a > 0:
             print("вы выжали!")
     game = input("Пропишите 'выход' если хотите выйти или нажмите на enter.")
-if op >= 10000:
+if op >= 3000:
     print(f"вы набрали {op} денег")
     print("вы прошли!")
 if a <= 0:
     print("жаль но вы умерли")
+if u10 == "нет":
+    print("ну тогда катитесь от сюда!")
     
